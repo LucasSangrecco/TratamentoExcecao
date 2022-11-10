@@ -58,4 +58,12 @@ public class Conta {
     public void setEmail(String email) {
         this.email = email;
     }
+    public String imprimirConta(){
+        return "Nome: " + getNome() +
+                "\nCPF: " + getCpf() +
+                "\nConta: " + getNumConta() +
+                "\nTelefone: " + getTelefone() +
+                "\nE-mail: " +getEmail();
+    }
+
 }
