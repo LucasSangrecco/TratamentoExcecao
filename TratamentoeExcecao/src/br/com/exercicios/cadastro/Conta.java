@@ -15,8 +15,8 @@ public class Conta {
         this.telefone = telefone;
         this.email = email;
     }
+    public Conta(){
 
-    public Conta() {
     }
 
     public String getNome() {

@@ -6,9 +6,7 @@ public class Agencia {
 
     private String nomeAgencia;
 
-    Conta[] contas = new Conta[2];
-    Conta conta;
-
+    ArrayList<Conta> contas = new ArrayList<Conta>(2);
 
     public Agencia(String nomeAgencia) {
         this.nomeAgencia = nomeAgencia;
@@ -23,17 +21,17 @@ public class Agencia {
     }
 
     public void inserirConta(Conta conta) {
-        for (int i=0;i< contas.length;i++){
-            contas[i] = new Conta();
-        }
+        contas.add(conta);
     }
 
     public String buscarConta() {
-        int conta=0;
-        for (int i = 0; i < contas.length; i++) {
-            contas[i].getNumConta();
-            conta=i;
+        int numConta=0;
+        Conta c ;
+
+        for (int i = 0; i < contas.size(); i++) {
+            c = (Conta)contas.get(i);
+            numConta = c.getNumConta();
         }
-        return "Conta encontrada!\n\n" + contas[conta].imprimirConta();
+        return "Conta encontrada!\n\n" + numConta;
     }
 }
